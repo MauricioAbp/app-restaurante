@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layoutPago"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:padding="32dp"
+    android:background="#F9F9F9">
+
+    <TextView
+        android:id="@+id/textTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Selecciona un método de pago"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="#333333"
+        android:layout_marginBottom="28dp" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/rbTarjeta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tarjeta de crédito"
+            android:textSize="18sp"
+            android:textColor="#444444"
+            android:layout_marginBottom="12dp" />
+
+        <RadioButton
+            android:id="@+id/rbYape"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Yape"
+            android:textSize="18sp"
+            android:textColor="#444444"
+            android:layout_marginBottom="12dp" />
+
+        <RadioButton
+            android:id="@+id/rbPlin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Plin"
+            android:textSize="18sp"
+            android:textColor="#444444"
+            android:layout_marginBottom="12dp" />
+
+        <RadioButton
+            android:id="@+id/rbEfectivo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pago en efectivo"
+            android:textSize="18sp"
+            android:textColor="#444444"
+            android:layout_marginBottom="24dp" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnPagar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:backgroundTint="#FF5722"
+        android:text="Pagar"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-medium"
+        android:elevation="4dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/rounded_button" />
+</LinearLayout>

@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".Registrar">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="16dp">
+
+        <!-- Botón de flecha para regresar -->
+        <ImageButton
+            android:id="@+id/btnIrAMain"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="28dp"
+            android:background="@null"
+            android:contentDescription="Botón de flecha"
+            android:scaleType="fitCenter"
+            android:scaleX="-1"
+            android:src="@drawable/flecha_correcta"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!-- Título principal -->
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Completar Registro"
+            android:textColor="#000000"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_marginTop="24dp"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@id/btnIrAMain"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Subtítulo -->
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Complete cada recuadro"
+            android:textColor="#000000"
+            android:textSize="17sp"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@id/textView3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Label y campo Nombre -->
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nombre"
+            android:textColor="#000000"
+            android:textSize="17sp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@id/textView5"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="32dp" />
+
+        <EditText
+            android:id="@+id/pTxNombre"
+            android:layout_width="0dp"
+            android:layout_height="43dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="32dp"
+            android:background="@drawable/edittext_borde_naranja"
+            android:hint="Ingrese sus nombres"
+            android:padding="12dp"
+            android:textColor="#000000"
+            android:textColorHint="#6D6969"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textView4" />
+
+        <!-- Label y campo Apellido -->
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Apellido"
+            android:textColor="#000000"
+            android:textSize="17sp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@id/pTxNombre"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="32dp" />
+
+        <EditText
+            android:id="@+id/pTxApellido"
+            android:layout_width="0dp"
+            android:layout_height="43dp"
+            android:background="@drawable/edittext_borde_naranja"
+            android:hint="Ingrese sus apellidos"
+            android:padding="12dp"
+            android:textColor="#000000"
+            android:textColorHint="#6A5A60"
+            android:textSize="16sp"
+            android:layout_marginTop="4dp"
+            app:layout_constraintTop_toBottomOf="@id/textView6"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp" />
+
+        <!-- Label y campo Correo -->
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Correo"
+            android:textColor="#000000"
+            android:textSize="17sp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@id/pTxApellido"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="32dp" />
+
+        <EditText
+            android:id="@+id/pTxCorreo"
+            android:layout_width="0dp"
+            android:layout_height="47dp"
+            android:background="@drawable/edittext_borde_naranja"
+            android:hint="ejemplo@gmail.com"
+            android:padding="12dp"
+            android:textColor="#000000"
+            android:textColorHint="#716666"
+            android:textSize="16sp"
+            android:layout_marginTop="4dp"
+            app:layout_constraintTop_toBottomOf="@id/textView7"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp" />
+
+        <!-- Label y campo FechaNacimiento -->
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fecha de nacimiento"
+            android:textColor="#000000"
+            android:textSize="17sp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@id/pTxCorreo"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="32dp" />
+
+        <EditText
+            android:id="@+id/pTxFechaNacimiento"
+            android:layout_width="0dp"
+            android:layout_height="49dp"
+            android:background="@drawable/edittext_borde_naranja"
+            android:hint="01/02/2009 ejemplo"
+            android:padding="12dp"
+            android:textColor="#000000"
+            android:textColorHint="#564A4A"
+            android:textSize="16sp"
+            android:layout_marginTop="4dp"
+            app:layout_constraintTop_toBottomOf="@id/textView8"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp" />
+
+        <!-- Label y campo Contraseña -->
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Contraseña"
+            android:textColor="#000000"
+            android:textSize="17sp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@id/pTxFechaNacimiento"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="32dp" />
+
+        <EditText
+            android:id="@+id/pTxContraseña"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:background="@drawable/edittext_borde_naranja"
+            android:hint="Ingrese su contraseña"
+            android:padding="12dp"
+            android:textColor="#000000"
+            android:textColorHint="#544D4D"
+            android:textSize="16sp"
+            android:layout_marginTop="4dp"
+            android:inputType="textPassword"
+            app:layout_constraintTop_toBottomOf="@id/textView9"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="32dp" />
+
+        <!-- Botón de registro -->
+        <Button
+            android:id="@+id/btnRegistrar"
+            android:layout_width="0dp"
+            android:layout_height="69dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            android:background="#FF5722"
+            android:text="Regístrate"
+            android:textAllCaps="false"
+            android:textColor="#FFFFFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/pTxContraseña" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
