@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        tools:context=".MenuActivity">
+
+        <!-- Título -->
+        <TextView
+            android:id="@+id/titulo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="BIENVENIDOS"
+            android:textColor="#D32F2F"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-medium"
+            android:gravity="center"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="16dp" />
+
+        <!-- RecyclerView -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerMenu"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            android:paddingBottom="8dp"
+            app:layout_constraintTop_toBottomOf="@id/titulo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Contenedor de resumen -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/summaryContainer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_summary_card"
+            android:elevation="6dp"
+            android:padding="16dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@id/recyclerMenu"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <TextView
+                android:id="@+id/tvResumenPedido"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Pedido:"
+                android:textSize="18sp"
+                android:textColor="#D32F2F"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-medium"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <TextView
+                android:id="@+id/tvCostoTotal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Total: S/. 0.00"
+                android:textSize="18sp"
+                android:textColor="#D32F2F"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-medium"
+                android:layout_marginTop="4dp"
+                app:layout_constraintTop_toBottomOf="@id/tvResumenPedido"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- Botón Confirmar -->
+        <Button
+            android:id="@+id/btnConfirmar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Confirmar pedido"
+            android:textColor="@color/white"
+            android:backgroundTint="#1976D2"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/summaryContainer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Botón Eliminar -->
+        <Button
+            android:id="@+id/btnEliminarTodo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Eliminar todo"
+            android:textColor="@color/white"
+            android:backgroundTint="#F44336"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@id/btnConfirmar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Botón carrito (izquierda) -->
+        <ImageButton
+            android:id="@+id/btnVerDetalle"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Ver detalle del pedido"
+            android:scaleType="centerInside"
+            android:padding="4dp"
+            android:src="@drawable/carrito_de_compras"
+            android:tint="#424242"
+            app:layout_constraintTop_toBottomOf="@id/btnEliminarTodo"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <!-- Botón ubicación (derecha) -->
+        <ImageButton
+            android:id="@+id/btnIrAMain"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Ir a ubicación"
+            android:scaleType="centerInside"
+            android:padding="4dp"
+            android:src="@drawable/ubicacion"
+            android:tint="#424242"
+            app:layout_constraintTop_toBottomOf="@id/btnEliminarTodo"
+            app:layout_constraintEnd_toEndOf="parent" />
+        <Button
+            android:id="@+id/btnPerfil"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Ir a Perfil"
+            android:textColor="@color/white"
+            android:backgroundTint="#4CAF50"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@id/btnIrAMain"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
